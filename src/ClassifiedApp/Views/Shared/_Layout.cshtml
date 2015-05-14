@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+            @Styles.Render("~/Content/css")
+            @*<link href="~/Content/bootstrap-rtl/bootstrap-rtl.min.css" rel="stylesheet" />*@
+        <link href="~/Content/classified_list.css" rel="stylesheet" />
+        <link href="~/Content/comment.css" rel="stylesheet" />
+        <link href="~/Content/custome-material.css" rel="stylesheet" />
+        <link href="~/Content/navbar.css" rel="stylesheet" />
+        <link href="~/Content/sidebar.css" rel="stylesheet" />
+        <link href="~/Content/Site.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/AngularApp/app/app.js"></script>
+    <script src="~/AngularApp/app/app.route.js"></script>
+
+
+    <script src="~/Scripts/angular-route.min.js"></script>
+    <!--NG-Flow-->
+    <script src="~/Scripts/flow.js"></script>
+    <script src="~/AngularApp/app/angular-libs/ngFlow/provider.js"></script>
+    <script src="~/AngularApp/app/angular-libs/ngFlow/angular-flow.js"></script>
+
+    <script src="~/AngularApp/app/angular-libs/ngFlow/directives/btn.js"></script>
+    <script src="~/AngularApp/app/angular-libs/ngFlow/directives/drag-events.js"></script>
+    <script src="~/AngularApp/app/angular-libs/ngFlow/directives/drop.js"></script>
+    <script src="~/AngularApp/app/angular-libs/ngFlow/directives/events.js"></script>
+    <script src="~/AngularApp/app/angular-libs/ngFlow/directives/img.js"></script>
+    <script src="~/AngularApp/app/angular-libs/ngFlow/directives/init.js"></script>
+    <script src="~/AngularApp/app/angular-libs/ngFlow/directives/transfers.js"></script>
+    <!--End Ng-Flow-->
+
+
+    <script src="~/AngularApp/app/classified/classified.js"></script>
+    <script src="~/AngularApp/app/classified/services/classified.service.js"></script>
+    <script src="~/AngularApp/app/classified/controllers/classified_list.controller.js"></script>
+    <script src="~/AngularApp/app/classified/controllers/create_ad.controller.js"></script>
+
+    <script src="~/AngularApp/app/comments/comments.js"></script>
+    <script src="~/AngularApp/app/comments/services/comments.services.js"></script>
+    <script src="~/AngularApp/app/comments/controllers/comments.controller.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/#/" class="navbar-brand">ClassifiedAds</a>
+                @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+            </div>
+            <div class="navbar-collapse collapse">
+               
+
+                @Html.Partial("_LoginPartial")
+            </div>
+        
+    </div>
+    <div class="container">
+        <div class="row">
+            @RenderBody()
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-md-offset-2 navbar-fixed-bottom ">
+                <footer class="footer">
+                    <p>&copy; @DateTime.Now.Year</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+    
+
+    
+            @Scripts.Render("~/bundles/bootstrap")
+     
+    @RenderSection("scripts", required: false)
+</body>
+</html>

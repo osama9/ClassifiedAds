@@ -1,0 +1,39 @@
+﻿@model ClassifiedApp.ViewModels.ClassifiedAdViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@*<% if @classified_ad.user %>
+<p>
+    <strong>Owner:</strong>
+    <%= @classified_ad.user.username %>
+</p>
+<% end %>*@
+<div>
+<p>
+    <strong>Title:</strong>
+    @Model.Title
+</p>
+
+<p>
+    <strong>Description:</strong>
+    @Model.Description
+</p>
+
+<div class="images">
+    @*<ul>
+        <% @classified_ad.images.each do |image|  %>
+        <li><img src="<%= image.path.url %>"></li>
+        <% end %>
+    </ul>*@
+</div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ClassifiedAdId }) |
+    <a href="/">Back</a>
+</p>
+
+
+@Html.Partial("_Comments", @Model)
+

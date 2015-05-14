@@ -1,0 +1,13 @@
+.comments-section{
+	margin-top: 300px;
+}
+
+.comments-section textarea{
+	margin-top: 10px;
+}
+
+.comment{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #bbbbbb;
+}

@@ -1,0 +1,12 @@
+table tbody tr td.post-image{
+	width: 150px;
+}
+
+table tbody tr td.post-city p{
+	line-height: 75px;
+}
+
+.date-header path{
+	fill: gray;
+}
+

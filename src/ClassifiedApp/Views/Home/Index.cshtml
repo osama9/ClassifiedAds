@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="col-sm-2 col-md-2 ">
+    @Html.Partial("_Sidebar", (List<ClassifiedApp.Models.Category>)ViewBag.Categories)
+</div>
+    <a href="@Url.Action("Create", "ClassifiedAds")" class="btn btn-primary glyphicon glyphicon-plus"></a>
+    <div ng-view class="view-frame animate-view "></div>
+
+
+

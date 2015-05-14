@@ -1,0 +1,16 @@
+body{
+ padding-top: 70px;
+}
+
+.nav-sidebar li a{
+	color:#3F51B5;
+}
+
+.btn-primary:not(.btn-link):not(.btn-flat)	 {
+	background-color: #3F51B5;
+}
+
+a, a:hover, a:focus {
+	color: #3F51B5;
+}
+

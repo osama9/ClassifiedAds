@@ -1,0 +1,61 @@
+<div class="col-md-10 col-md-offset-1">
+    <div class="row">
+        <!--<form ng-submit="vm.submit()">
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <input type="text" placeholder="{{vm.keywords}}" class="form-control">
+                </div>
+                <div class="form-group">
+                    <select class="form-control"
+                            ng-model="vm.SelectedCategory" ng-options="category.CategoryId as category.EnglishName for category in vm.categories">
+                        <option value="">Select Category</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <select class="form-control"
+                            ng-model="vm.SelectedCity" ng-options="city.CityId as city.EnglishName for city in vm.cities">
+                        <option value="">Select City</option>
+                    </select>
+                </div>
+            </div>
+        </form>-->
+
+        <table class="table" ng-show="vm.classifiedList.length > 0" ng-cloak>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th><img class="svg city-header" src="/img/worldgrid.svg" /></th>
+                    <th><img class="svg date-header" src="/img/clock.svg" /></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr ng-repeat="classified in vm.classifiedList">
+
+                    <td class="post-image"><img src="{{classified.imageUrl}}" width="150" height="100" /></td>
+
+                    <td>
+                        <h4><a href="/ClassifiedAd/{{classified.ClassifiedAdId}}"> {{classified.Title}}</a></h4>
+                        <p>{{classified.Description}}</p>
+                    </td>
+                    <td class="post-city">
+                        <h5>
+                            {{classified.City.EnglishName}}
+                        </h5>
+                    </td>
+                    <td>{{classified.CreatedAt | date:"dd/MM/yyyy 'at' h:mma"}}</td>
+
+                </tr>
+
+            </tbody>
+        </table>
+        <div style="margin-top:300px;">
+            <strong ng-hide="vm.classifiedList.length > 0" ng-cloak>Sorry there are no items in this category :(</strong>
+        </div>
+
+    </div>
+</div>

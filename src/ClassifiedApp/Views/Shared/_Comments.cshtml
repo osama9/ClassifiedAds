@@ -1,0 +1,21 @@
+﻿@model ClassifiedApp.ViewModels.ClassifiedAdViewModel
+<div class="col-md-8 col-md-offset-2">
+<section class="comments-section">
+    <div ng-controller="CommentsController as vm" ng-init="vm.init(@Model.ClassifiedAdId)">
+
+<div class="comment" ng-repeat="comment in vm.comments" ng-cloak>
+@*<span class="username">{{comment.user.username}}</span>*@
+<span class="time">{{comment.CreatedAt | date:"dd/MM/yyyy 'at' h:mma"}}</span>
+<p class="content">{{comment.Content}}</p>
+</div>
+        <form role="form" class="form-horizontal" ng-submit="vm.submit(@Model.ClassifiedAdId)">
+            <div class="add-comment form-group">
+                <textarea name="contnet" rows="6" cols="6" class="form-control" ng-model="vm.comment"></textarea>
+                <button type="submit" class="btn btn-primary">Comment</button>
+            </div>
+        </form>
+
+        </div>
+</section>
+
+</div>
